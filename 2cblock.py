@@ -10,16 +10,16 @@ while True:
         break
 
     hyo=mojir.split(' ')
-    suu=int(hyo[1])
+    suu=int(hyo[0])
     if suu > num_lim:
-        num_lim=suu//100*100+99
+        num_lim=suu//1000*1000+999
         delim=''
-        if suu//100%10==0:
-            delim+=zen_suu[suu//1000]
+        if suu//1000%10==0:
+            delim+=zen_suu[suu//10000]
             print(delim+'-')            
         else:
-            delim+=kan_suu[suu//100%10]
+            delim+=kan_suu[suu//1000%10]
             print('-'+delim)
 
     #print(mojir)
-    print(hyo[0])
+    print(hyo[1])
